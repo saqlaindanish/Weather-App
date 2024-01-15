@@ -3,8 +3,8 @@ import Image from "./Image";
 import { useState } from "react";
 
 const WeatherApp = () => {
-    const apikey = "431b969f6bba153c14abc429716fa132";
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+    const apikey = process.env.REACT_APP_API_KEY;
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const [pic, setPic] = useState(logo);
     const [city, setCity] = useState('');
